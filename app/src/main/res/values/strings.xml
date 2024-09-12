@@ -8,6 +8,13 @@
     <string name="action_settings">Settings</string>
 
     <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_gallery">Leakage Detection</string>
+    <string name="menu_slideshow">Automated Watering</string>
+    <string-array name="job_type">
+        <item>Watering Lawn</item>
+        <item>Watering Vegetables</item>
+        <item>Watering Flowers</item>
+        <item>Watering Trees</item>
+
+    </string-array>
 </resources>

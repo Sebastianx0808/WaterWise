@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+    <!-- Pipe Line -->
+    <line x1="50" y1="50" x2="450" y2="50" stroke="black" stroke-width="4"/>
+    <line x1="450" y1="50" x2="450" y2="450" stroke="black" stroke-width="4"/>
+    <line x1="450" y1="450" x2="50" y2="450" stroke="black" stroke-width="4"/>
+    <line x1="50" y1="450" x2="50" y2="50" stroke="black" stroke-width="4"/>
+
+    <!-- Junction -->
+    <circle cx="250" cy="250" r="20" stroke="black" stroke-width="4" fill="white"/>
+    <circle cx="250" cy="250" r="10" stroke="black" stroke-width="4" fill="yellow"/>
+
+    <!-- Inlet -->
+    <rect x="20" y="200" width="30" height="30" stroke="black" stroke-width="4" fill="lightblue"/>
+    <circle cx="35" cy="215" r="5" stroke="black" stroke-width="4" fill="red"/>
+
+    <!-- Outlet -->
+    <rect x="450" y="200" width="30" height="30" stroke="black" stroke-width="4" fill="lightgreen"/>
+    <circle cx="465" cy="215" r="5" stroke="black" stroke-width="4" fill="blue"/>
+</svg>

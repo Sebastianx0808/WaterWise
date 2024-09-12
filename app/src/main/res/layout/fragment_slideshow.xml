@@ -1,22 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.slideshow.SlideshowFragment">
+    android:orientation="vertical"
+    android:padding="16dp">
 
+    <!-- Header -->
     <TextView
-        android:id="@+id/text_slideshow"
+        android:id="@+id/header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Automatic and Manual Watering"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Location Input -->
+    <EditText
+        android:id="@+id/locationEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:hint="Enter location"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Get Location Button -->
+    <Button
+        android:id="@+id/getLocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get Location from Device"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Send Location Button -->
+    <Button
+        android:id="@+id/sendLocationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fetch Weather Data"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Weather Details -->
+    <TextView
+        android:id="@+id/weatherDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location:\nTemperature:\nClimate:"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Automatic Watering Switch -->
+    <Switch
+        android:id="@+id/autoWateringSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Automatic Watering"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Expandable Section for Automatic Watering -->
+    <LinearLayout
+        android:id="@+id/expanderLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- Switch to Mimic Sprinkler -->
+        <Switch
+            android:id="@+id/sprinklerSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sprinkler"
+            android:layout_marginBottom="16dp"/>
+
+        <SeekBar
+            android:id="@+id/wateringSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:max="100"
+            android:progress="0"
+            android:layout_gravity="start"/>
+    </LinearLayout>
+
+    <!-- Manual Watering Section -->
+    <LinearLayout
+        android:id="@+id/manualWateringLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/jobNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter job name"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/jobType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter Type"
+            android:layout_marginBottom="4dp"/>
+
+        <!-- Time Picker Input -->
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Start Button -->
+        <Button
+            android:id="@+id/startWateringButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Manual Watering"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Manual Watering Progress Bar -->
+        <SeekBar
+            android:id="@+id/manualWateringProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"/>
+    </LinearLayout>
+
+</LinearLayout>
