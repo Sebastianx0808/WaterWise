@@ -29,7 +29,7 @@ class WaterUsageAdapter(private val waterUsageRecords: List<WaterUsageRecord>) :
 
         fun bind(record: WaterUsageRecord) {
             dateTextView.text = record.date
-            usageTextView.text = "${record.usage} L" // Convert Double to String with unit
+            usageTextView.text = "${record.usage}"
             dayTextView.text = record.dayOfWeek
         }
     }

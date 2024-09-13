@@ -38,11 +38,9 @@ class HomeFragment : Fragment() {
         val root: View = binding.root
 
 
-        val userNameTextView: TextView = binding.userNameHeader
-        val userName = "John Doe"
-        userNameTextView.text = userName
 
-        val carouselImages = listOf(R.drawable.image1, R.drawable.image1, R.drawable.image3)
+
+        val carouselImages = listOf(R.drawable.one, R.drawable.two, R.drawable.three)
         if (carouselImages.isNotEmpty()){
             Log.d("HomeFragment", "Carousel images loaded")
         } else {
@@ -52,7 +50,13 @@ class HomeFragment : Fragment() {
         binding.carouselViewpager.adapter = carouselAdapter
 
         binding.button1Container.setOnClickListener{
-            showModal("Button 1 clicked")
+            showModal("Effortlessly manage your household water usage with smart home integration, ensuring every drop counts towards conservation.")
+        }
+        binding.button2Container.setOnClickListener {
+            showModal("Track and optimize water consumption in real time with a smart water meter, helping you save water and reduce costs.")
+        }
+        binding.button3Container.setOnClickListener {
+            showModal("Detect and prevent costly water damage instantly with a smart water leakage detector, keeping your home safe and sustainable.")
         }
 
         waterUsageRecords = generateSimulatedData().toMutableList()

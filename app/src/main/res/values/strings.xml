@@ -10,6 +10,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Leakage Detection</string>
     <string name="menu_slideshow">Automated Watering</string>
+    <string name="default_web_client_id">628212755608-kknbnnkrmigebdul0pjaeu295neq948s.apps.googleusercontent.com</string>
     <string-array name="job_type">
         <item>Watering Lawn</item>
         <item>Watering Vegetables</item>

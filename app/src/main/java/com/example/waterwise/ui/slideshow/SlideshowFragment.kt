@@ -140,6 +140,14 @@ class SlideshowFragment : Fragment() {
                     val windspeed = weatherResponse?.wind?.speed ?: 0.0
                     val description = weatherResponse?.weather?.firstOrNull()?.description ?: "No data"
 
+                    val weatherInfo = "Temperature: $temperature°C\n" +
+                            "Wind Speed: $windspeed m/s\n" +
+                            "Description: $description"
+
+                    weatherDetailsTextView.text = weatherInfo
+
+
+
                     val soilMoisture = calculateSoilMositure(soilData)
                     val wateringIndex = calculateWateringIndex(temperature, soilMoisture, windspeed)
                     if (wateringIndex > 0.3) {

@@ -8,32 +8,19 @@
 
 
 
-    <!-- Header for User Name -->
-    <TextView
-        android:id="@+id/user_name_header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="User Name"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:padding="8dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+
 
     <!-- Carousel Container -->
     <androidx.cardview.widget.CardView
         android:id="@+id/carousel_container"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/user_name_header"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/three_image_buttons"
         app:cardCornerRadius="16dp"
+        android:layout_marginStart="16dp"
         app:cardElevation="4dp"
         android:layout_margin="16dp">
 
@@ -143,16 +130,18 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/image1"
+                    android:src="@drawable/smarthome"
                     android:background="@drawable/circular_border" />
 
                 <TextView
                     android:id="@+id/button1_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Button 1"
-                    android:textSize="14sp"
-                    android:layout_gravity="center_horizontal|bottom"
+                    android:text="Smart Home"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal|center"
                     android:layout_marginTop="8dp" />
 
             </FrameLayout>
@@ -172,16 +161,18 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/image3"
+                    android:src="@drawable/smartmeter"
                     android:background="@drawable/circular_border" />
 
                 <TextView
                     android:id="@+id/button2_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Button 2"
-                    android:textSize="14sp"
-                    android:layout_gravity="center_horizontal|bottom"
+                    android:text="Smart Meter"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal|center"
                     android:layout_marginTop="8dp" />
 
             </FrameLayout>
@@ -201,16 +192,18 @@
                     android:layout_height="100dp"
                     android:layout_gravity="center"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/image3"
+                    android:src="@drawable/leakage2"
                     android:background="@drawable/circular_border" />
 
                 <TextView
                     android:id="@+id/button3_text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Button 3"
-                    android:textSize="14sp"
-                    android:layout_gravity="center_horizontal|bottom"
+                    android:text="Anti-Leakage"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:layout_gravity="center_horizontal|center"
                     android:layout_marginTop="8dp" />
 
             </FrameLayout>

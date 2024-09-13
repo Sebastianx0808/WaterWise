@@ -80,7 +80,7 @@ class GalleryFragment : Fragment() {
                 hideNotification()
             }, 20000) // Hide notification after 20 seconds
         }
-        handler.postDelayed(notificationRunnable, 10000) // Trigger after 5 minutes
+        handler.postDelayed(notificationRunnable, 500000) // Trigger after 5 minutes
     }
 
     private fun showNotification(message: String) {
@@ -152,7 +152,7 @@ class GalleryFragment : Fragment() {
                 logCount++
 
                 // Randomly trigger a pipe leakage error after 4 logs
-                if (logCount >= 4 && (0..10).random() > 7) {
+                if (logCount >= 8 && (0..10).random() > 7) {
                     showNotification("Pipe Leakage Detected at Junction $pipeJunctionNumber!")
                     logCount = 0 // Reset after error
                 }

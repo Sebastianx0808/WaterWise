@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -54,6 +55,16 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation ("com.squareup.retrofit2:retrofit:2.9.0")
     implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
+    implementation("androidx.activity:activity-ktx:1.6.0")
+    implementation("androidx.fragment:fragment-ktx:1.5.0")
+    implementation("com.google.android.gms:play-services-auth:21.2.0")
+    implementation(libs.firebase.auth.ktx)
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
+    implementation("com.google.ai.client.generativeai:generativeai:0.7.0")
+
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

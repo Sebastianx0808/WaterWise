@@ -1,7 +1,11 @@
 package com.example.waterwise
 
 import android.os.Bundle
+import android.net.Uri
+import com.bumptech.glide.Glide
 import android.view.Menu
+import android.widget.ImageView
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -12,6 +16,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.waterwise.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,11 +41,28 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow, R.id.nav_tips
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+        val username = intent.getStringExtra("USERNAME")
+        val email = intent.getStringExtra("EMAIL")
+        val profileImageUri = intent.getStringExtra("PROFILE_IMAGE_URI")
+
+        val headerView = navView.getHeaderView(0)
+        val profileImageView: ImageView = headerView.findViewById(R.id.imageView)
+        val usernameTextView: TextView = headerView.findViewById(R.id.name)
+        val emailTextView: TextView = headerView.findViewById(R.id.email)
+
+        usernameTextView.text = username
+        emailTextView.text = email
+        if (profileImageUri != null) {
+            Glide.with(this).load(Uri.parse(profileImageUri)).into(profileImageView)
+        }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

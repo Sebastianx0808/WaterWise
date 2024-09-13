@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "492597622019",
+    "project_id": "waterwise-c009d",
+    "storage_bucket": "waterwise-c009d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492597622019:android:4012d11264ebda4f2ae536",
+        "android_client_info": {
+          "package_name": "com.example.waterwise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "492597622019-lkurpfs85h3r0995rcl1mutfn4v7uk5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7PpBgh6j2n8PkuUhWazvE_3H_eW75asQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "492597622019-lkurpfs85h3r0995rcl1mutfn4v7uk5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
